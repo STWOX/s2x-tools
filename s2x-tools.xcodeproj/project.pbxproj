@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33040FC0293CB60600C59F25 /* masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33325B952934DDA4001A90A4 /* masonry.framework */; platformFilter = ios; };
+		33040FC1293CB60600C59F25 /* masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33325B952934DDA4001A90A4 /* masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33325B7E2934DC2B001A90A4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB73752933C461002F94BE /* SceneDelegate.m */; };
 		33325B982934DDA4001A90A4 /* masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 33325B972934DDA4001A90A4 /* masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33325B9C2934DDCC001A90A4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 33325B6E2934D37A001A90A4 /* MASViewAttribute.m */; };
@@ -19,7 +21,6 @@
 		33325BA32934DDCC001A90A4 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 33325B6B2934D37A001A90A4 /* MASConstraintMaker.m */; };
 		33325BA42934DDCC001A90A4 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33325B5C2934D379001A90A4 /* ViewController+MASAdditions.m */; };
 		33325BA52934DDCC001A90A4 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 33325B642934D37A001A90A4 /* MASConstraint.m */; };
-		33325BA62934DDDC001A90A4 /* masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33325B952934DDA4001A90A4 /* masonry.framework */; };
 		33AB73732933C461002F94BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB73722933C461002F94BE /* AppDelegate.m */; };
 		33AB73792933C461002F94BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB73782933C461002F94BE /* ViewController.m */; };
 		33AB737C2933C461002F94BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AB737A2933C461002F94BE /* Main.storyboard */; };
@@ -29,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33040FC2293CB60600C59F25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33AB73662933C461002F94BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33325B942934DDA4001A90A4;
+			remoteInfo = masonry;
+		};
 		33325BA72934DDE1001A90A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 33AB73662933C461002F94BE /* Project object */;
@@ -45,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				33040FC1293CB60600C59F25 /* masonry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33325BA62934DDDC001A90A4 /* masonry.framework in Frameworks */,
+				33040FC0293CB60600C59F25 /* masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +243,7 @@
 			);
 			dependencies = (
 				33325BA82934DDE1001A90A4 /* PBXTargetDependency */,
+				33040FC3293CB60600C59F25 /* PBXTargetDependency */,
 			);
 			name = "s2x-tools";
 			productName = "s2x-tools";
@@ -328,6 +338,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33040FC3293CB60600C59F25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 33325B942934DDA4001A90A4 /* masonry */;
+			targetProxy = 33040FC2293CB60600C59F25 /* PBXContainerItemProxy */;
+		};
 		33325BA82934DDE1001A90A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 33325B942934DDA4001A90A4 /* masonry */;
@@ -379,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = space.missyou.masonry;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -410,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = space.missyou.masonry;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -467,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
